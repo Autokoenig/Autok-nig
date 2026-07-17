@@ -72,6 +72,20 @@ header.site-header {
   gap: 0;
 }
 
+.logo-bar {
+  background: #17181a;
+  margin: 0;
+  padding: 0.6rem 0;
+  justify-content: center;
+}
+.site-logo {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  margin: 0 auto;
+}
+
 .plate-eu {
   background: var(--eu-blue);
   color: #fff;
@@ -96,6 +110,12 @@ header.site-header {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
 }
 
 .plate-name .plate-font {
