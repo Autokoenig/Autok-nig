@@ -57,109 +57,58 @@ img { max-width: 100%; }
   padding: 0 1.5rem;
 }
 
-/* --- Header: Kennzeichen-Leiste --- */
+/* --- Header: Index links, Logo rechts --- */
 header.site-header {
-  background: var(--plate-white);
-  border-bottom: 4px solid var(--slate);
-}
-
-.plate-bar {
-  display: flex;
-  align-items: stretch;
-  max-width: 960px;
-  margin: 1.25rem auto;
-  padding: 0 1.5rem;
-  gap: 0;
-}
-
-.logo-bar {
   background: #17181a;
-  margin: 0;
-  padding: 0.6rem 0;
-  justify-content: center;
+  border-bottom: 4px solid var(--amt-gold);
 }
-.site-logo {
-  display: block;
-  width: 100%;
-  max-width: 380px;
-  height: auto;
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem 2rem;
+  max-width: 960px;
   margin: 0 auto;
+  padding: 0.9rem 1.5rem;
 }
 
-.plate-eu {
-  background: var(--eu-blue);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0.4rem 0.7rem;
-  border-radius: var(--radius) 0 0 var(--radius);
-  font-size: 0.65rem;
-  font-weight: 600;
-  min-width: 42px;
-}
-.plate-eu .stars { font-size: 0.7rem; line-height: 1; margin-bottom: 2px; }
-
-.plate-name {
-  background: var(--plate-white);
-  border: 3px solid var(--plate-black);
-  border-left: none;
-  border-radius: 0 var(--radius) var(--radius) 0;
-  padding: 0.35rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.logo-icon {
-  width: 40px;
-  height: 40px;
+.header-logo-link {
   flex-shrink: 0;
+  line-height: 0;
 }
-
-.plate-name .plate-font {
-  font-size: 1.9rem;
-  font-weight: 700;
-  color: var(--plate-black);
-  margin: 0;
-  letter-spacing: 0.03em;
-}
-
-.plate-name .tagline {
-  font-family: 'Source Sans 3', sans-serif;
-  text-transform: none;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  border-left: 2px solid var(--border);
-  padding-left: 0.6rem;
-  margin-left: 0.2rem;
+.header-logo-small {
+  height: 58px;
+  width: auto;
+  display: block;
+  border-radius: 4px;
 }
 
 nav.main-nav {
-  background: var(--slate);
+  flex: 1 1 auto;
+  min-width: 220px;
 }
-nav.main-nav ul {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+.header-nav-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  gap: 1.5rem;
   flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
 }
-nav.main-nav a {
+.header-nav-list a {
   display: inline-block;
   color: #dfe4ea;
-  padding: 0.7rem 0;
+  padding: 0.3rem 0;
   font-family: 'Oswald', sans-serif;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   border-bottom: 3px solid transparent;
 }
-nav.main-nav a:hover,
-nav.main-nav a[aria-current="page"] {
+.header-nav-list a:hover,
+.header-nav-list a[aria-current="page"] {
   color: #fff;
   border-bottom-color: var(--amt-gold);
   text-decoration: none;
