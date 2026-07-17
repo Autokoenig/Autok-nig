@@ -59,8 +59,8 @@ img { max-width: 100%; }
 
 /* --- Header: Kennzeichen-Leiste --- */
 header.site-header {
-  background: #17181a;
-  border-bottom: 4px solid var(--amt-gold);
+  background: var(--plate-white);
+  border-bottom: 4px solid var(--slate);
 }
 
 .plate-bar {
@@ -73,10 +73,9 @@ header.site-header {
 }
 
 .logo-bar {
-  max-width: none;
-  width: 100%;
+  background: #17181a;
   margin: 0;
-  padding: 0;
+  padding: 0.6rem 0;
   justify-content: center;
 }
 .site-logo {
