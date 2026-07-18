@@ -57,7 +57,7 @@ img { max-width: 100%; }
   padding: 0 1.5rem;
 }
 
-/* --- Header: großes Logo oben, Kapitel darunter senkrecht --- */
+/* --- Header: Kapitel linksbündig, Logo rechts, durchscheinend --- */
 header.site-header {
   background: #17181a;
   border-bottom: 4px solid var(--amt-gold);
@@ -65,49 +65,49 @@ header.site-header {
 
 .header-inner {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 0.4rem;
+  justify-content: space-between;
+  gap: 1rem;
   max-width: 960px;
   margin: 0 auto;
-  padding: 1.3rem 1.5rem 1rem;
+  padding: 0.9rem 1.5rem;
 }
 
 .header-logo-link {
-  order: -1;
+  order: 2;
   flex-shrink: 0;
   line-height: 0;
-  margin-bottom: 0.4rem;
 }
 .header-logo-small {
-  height: 140px;
+  height: 72px;
   width: auto;
   display: block;
-  opacity: 0.9;
+  opacity: 0.8;
   mix-blend-mode: screen;
 }
 
 nav.main-nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  order: 1;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 .header-nav-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.3rem 1rem;
 }
 .header-nav-list a {
   display: inline-block;
   color: #dfe4ea;
-  padding: 0.2rem 0;
+  padding: 0.15rem 0;
   font-family: 'Oswald', sans-serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.04em;
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   border-bottom: 3px solid transparent;
 }
