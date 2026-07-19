@@ -320,7 +320,85 @@ nav.main-nav {
   color: var(--knigge-gold);
 }
 
-/* --- Anzeigen-Platzhalter --- */
+/* --- Verwandte Artikel --- */
+.related-articles {
+  margin: 3rem 0 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.related-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  color: var(--knigge-green);
+  margin-bottom: 1.2rem;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.related-card {
+  display: block;
+  background: var(--bg-card, #fff);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--knigge-green);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.related-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  text-decoration: none;
+}
+.related-label {
+  display: block;
+  font-weight: 700;
+  color: var(--knigge-green);
+  margin-bottom: 0.3rem;
+}
+.related-desc {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted, #6c757d);
+}
+
+/* --- Versicherungsvergleich CTA (Platzhalter-Link) --- */
+.vergleich-cta {
+  background: linear-gradient(135deg, var(--knigge-green), #1f3d2e);
+  color: #f8f9fa;
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+  margin: 2rem 0;
+  border: 1px solid var(--knigge-gold);
+}
+.vergleich-cta strong {
+  color: var(--knigge-gold);
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1.05rem;
+}
+.vergleich-cta p {
+  margin: 0 0 0.9rem;
+  font-size: 0.92rem;
+  color: #e9ecef;
+}
+.vergleich-cta a.vergleich-button {
+  display: inline-block;
+  background: var(--knigge-gold);
+  color: var(--knigge-green);
+  font-weight: 700;
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.vergleich-cta a.vergleich-button:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
 .ad-slot {
   background: #f1f3f0;
   border: 1px dashed #ced4da;
@@ -390,6 +468,14 @@ footer.site-footer .foot-links {
   gap: 1.5rem;
   margin-top: 1rem;
   flex-wrap: wrap;
+}
+footer.site-footer .affiliate-note {
+  margin-top: 1.3rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.78rem;
+  color: #adb5bd;
+  line-height: 1.6;
 }
 
 /* --- Desktop-Optimierung --- */
