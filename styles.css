@@ -61,6 +61,11 @@ img { max-width: 100%; }
   padding: 0 1.5rem;
 }
 
+main {
+  position: relative;
+  z-index: 3;
+}
+
 /* --- Header & Navigation --- */
 header.site-header {
   background: var(--knigge-green);
@@ -88,21 +93,23 @@ header.site-header {
 }
 
 .header-logo-mini {
-  height: 60px;
+  height: 80px;
   width: auto;
   display: block;
   opacity: 0.95;
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
   transition: height 0.25s ease;
 }
 .header-logo-large .header-logo-mini {
-  height: 100px;
+  height: 148px;
 }
 .site-header.is-scrolled .header-logo-mini {
-  height: 36px;
+  height: 40px;
 }
 .site-header.is-scrolled.header-logo-large .header-logo-mini {
-  height: 44px;
+  height: 48px;
 }
 
 .menu-compact {
@@ -130,6 +137,8 @@ header.site-header {
 nav.main-nav {
   flex: 1 1 auto;
   min-width: 0;
+  position: relative;
+  z-index: 2;
 }
 .header-nav-list {
   list-style: none;
