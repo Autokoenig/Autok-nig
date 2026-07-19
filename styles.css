@@ -74,14 +74,14 @@ header.site-header {
   position: relative;
   max-width: 1020px;
   margin: 0 auto;
-  padding: 1.3rem 1.5rem;
+  padding: 1.6rem 1.5rem;
   display: flex;
   flex-direction: column;
   transition: padding 0.25s ease;
 }
 
 .site-header.is-scrolled .header-inner {
-  padding: 0.55rem 1.5rem;
+  padding: 0.6rem 1.5rem;
 }
 
 .nav-toggle-input {
@@ -98,20 +98,20 @@ header.site-header {
 }
 
 .header-logo-mini {
-  height: 52px;
+  height: 78px;
   width: auto;
   display: block;
-  opacity: 0.92;
+  opacity: 0.95;
   transition: height 0.25s ease;
 }
 .header-logo-large .header-logo-mini {
-  height: 92px;
+  height: 130px;
 }
 .site-header.is-scrolled .header-logo-mini {
-  height: 34px;
+  height: 40px;
 }
 .site-header.is-scrolled.header-logo-large .header-logo-mini {
-  height: 42px;
+  height: 52px;
 }
 
 .header-logo-link {
