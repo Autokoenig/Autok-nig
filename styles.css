@@ -1,0 +1,111 @@
+/* ===========================================================
+   Autoknigge — Stilvoll, sicher & clever mobil
+   Design-Idee: Klassische Eleganz trifft Moderne.
+   Elegante Farbwelten (Racing Green, Champagner, Anthrazit)
+   sorgen für einen vertrauenswürdigen, stilvollen Look.
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --knigge-green: #1b362c;
+  --knigge-green-light: #284e40;
+  --knigge-gold: #c5a880;
+  --bg: #f8f9fa;
+  --bg-card: #ffffff;
+  --text-dark: #212529;
+  --text-muted: #6c757d;
+  --border: #e9ecef;
+  --radius: 8px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-dark);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--knigge-green);
+  margin: 0 0 0.5em;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+a { 
+  color: var(--knigge-green-light); 
+  text-decoration: none; 
+  transition: color 0.2s ease;
+}
+a:hover { color: var(--knigge-gold); text-decoration: none; }
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--knigge-gold);
+  outline-offset: 2px;
+}
+
+img { max-width: 100%; }
+
+.wrap {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+main {
+  position: relative;
+  z-index: 3;
+}
+
+/* --- Header & Navigation --- */
+header.site-header {
+  background: var(--knigge-green);
+  border-bottom: 3px solid var(--knigge-gold);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  position: relative;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 0.6rem 1.2rem;
+  transition: padding 0.25s ease;
+}
+
+.site-header.is-scrolled .header-inner {
+  padding: 0.5rem 1.5rem;
+}
+
+.header-logo-mini {
+  height: 80px;
+  width: auto;
+  display: block;
+  opacity: 0.95;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: height 0.25s ease;
+}
+.header-logo-large .header-logo-mini {
+  height: 148px;
+}
+.site-header.is-scrolled .header-logo-mini {
+  height: 40px;
+}
+.site-header.is-scrolled.header-logo-large .header-l
