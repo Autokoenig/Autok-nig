@@ -74,92 +74,62 @@ header.site-header {
   position: relative;
   max-width: 1020px;
   margin: 0 auto;
-  padding: 1.6rem 1.5rem;
+  padding: 1rem 1.5rem;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.2rem;
   transition: padding 0.25s ease;
 }
 
 .site-header.is-scrolled .header-inner {
-  padding: 0.6rem 1.5rem;
-}
-
-.nav-toggle-input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.header-top-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  padding: 0.5rem 1.5rem;
 }
 
 .header-logo-mini {
-  height: 78px;
+  height: 60px;
   width: auto;
   display: block;
   opacity: 0.95;
+  order: 2;
   transition: height 0.25s ease;
 }
 .header-logo-large .header-logo-mini {
-  height: 130px;
+  height: 100px;
 }
 .site-header.is-scrolled .header-logo-mini {
-  height: 40px;
+  height: 36px;
 }
 .site-header.is-scrolled.header-logo-large .header-logo-mini {
-  height: 52px;
+  height: 44px;
 }
-
-.header-logo-link {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  width: fit-content;
-  padding: 0.4rem 0;
-}
-
-.menu-hint {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: #f8f9fa;
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-.menu-icon { font-size: 1.1rem; color: var(--knigge-gold); }
 
 nav.main-nav {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.3s ease-in-out;
-}
-.nav-toggle-input:checked ~ nav.main-nav {
-  max-height: 500px;
+  order: 1;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 .header-nav-list {
   list-style: none;
-  margin: 1rem 0 0;
-  padding: 1rem 0 0;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.8rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 1.3rem;
 }
 .header-nav-list a {
   display: inline-block;
   color: #e9ecef;
   padding: 0.2rem 0;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 0.02em;
+  transition: font-size 0.25s ease, color 0.25s ease;
+}
+.site-header.is-scrolled .header-nav-list a {
+  font-size: 0.78rem;
 }
 .header-nav-list a:hover,
 .header-nav-list a[aria-current="page"] {
@@ -365,22 +335,7 @@ footer.site-footer .foot-links {
 
 /* --- Desktop-Optimierung --- */
 @media (min-width: 768px) {
-  .header-inner {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 1.2rem 1.5rem;
-  }
-  .menu-hint { display: none; }
-  nav.main-nav {
-    max-height: none;
-    overflow: visible;
-  }
   .header-nav-list {
-    margin: 0;
-    padding: 0;
-    border-top: none;
-    flex-direction: row;
     gap: 1.8rem;
   }
 
