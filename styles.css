@@ -534,9 +534,44 @@ nav.main-nav {
   border-color: #6b7a70;
 }
 .cc-btn-secondary:hover { border-color: var(--knigge-gold); color: var(--knigge-gold); }
+.cc-btn-text {
+  background: transparent;
+  color: #adb5bd;
+  text-decoration: underline;
+  padding: 0.6rem 0.4rem;
+}
+.cc-btn-text:hover { color: var(--knigge-gold); }
+
+.cc-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.cc-details {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  max-width: 1020px;
+}
+.cc-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: #e9ecef;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.cc-option input { margin-top: 0.2rem; flex-shrink: 0; }
+.cc-option-disabled { opacity: 0.65; cursor: default; }
+.cc-details .cc-btn-primary { align-self: flex-start; margin-top: 0.3rem; }
 
 @media (max-width: 600px) {
-  .cc-inner { flex-direction: column; align-items: stretch; }
+  .cc-main { flex-direction: column; align-items: stretch; }
   .cc-buttons { justify-content: stretch; }
   .cc-btn { flex: 1; }
 }
