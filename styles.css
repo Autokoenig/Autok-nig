@@ -132,7 +132,7 @@ header.site-header {
 }
 .menu-compact .menu-icon {
   font-size: 1.1rem;
-  color: var(--knigge-gold);
+  color: #ffffff;
 }
 .site-header.is-scrolled .menu-compact {
   opacity: 1;
@@ -601,10 +601,24 @@ nav.main-nav {
 
 .kennzeichen-links {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+.kennzeichen-links a {
   text-align: left;
+  white-space: nowrap;
+  display: inline-block;
 }
 .kennzeichen-links a::before {
   content: "→ ";
+}
+@media (max-width: 420px) {
+  .kennzeichen-links a {
+    white-space: normal;
+  }
 }
 
 .compare-table-wrap {
